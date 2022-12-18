@@ -1,9 +1,5 @@
-﻿using Salary.Data;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Salary.Models
 {
@@ -44,12 +40,6 @@ namespace Salary.Models
 
         [Display(Name = "Уровень должности")]
         [DataType(DataType.Text)]
-        public int Boss { get; set; }
-
-        public User GetUser()
-        {
-            var db = new DbService();            
-            return db.User.Find(UserId);
-        }
+        public int Boss { get; set; }       
     }
 }
