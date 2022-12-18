@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Salary.Data;
 using Salary.Models;
@@ -22,9 +23,23 @@ namespace Salary.Controllers
             return View(await service.User.ToListAsync());
         }
 
-        public IActionResult Profile()
+        public async Task<IActionResult> Profile(string id)
         {
-            return View();
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var user = await service.User
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            
+            Employee employee = service.Employee.Find(user.UserId);
+            ViewBag.Employee = employee;            
+            return View(user);
         }
 
         // GET: User/Details/5
