@@ -14,7 +14,7 @@ namespace Salary.Models
         [DataType(DataType.Text)]
         public int Firm { get; set; }
 
-        [Display(Name = "Code of organization")]
+        [Display(Name = "Код организации")]
         [DataType(DataType.Text)]
         public int Dep { get; set; }
 
