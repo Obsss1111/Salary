@@ -5,15 +5,15 @@ namespace Salary.Models
 {
     public class Role
     {
-        [Display(Name = "ID роли")]
+        [Display(Name = "Identificator роли")]
         [DataType(DataType.Text)]
         public int Id { get; private set; }
 
-        [Display(Name = "Роль")]
+        [Display(Name = "Role")]
         [DataType(DataType.Text)]
         public string Name { get; set; }
 
-        [Display(Name = "Права")]
+        [Display(Name = "Rules")]
         public List<Right> Rights { get; private set; }
 
         public bool AddRight(Right right)
