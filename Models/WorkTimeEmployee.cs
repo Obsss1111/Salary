@@ -18,11 +18,11 @@ namespace Salary.Models
         [DataType(DataType.Text)]
         public int EmployeeId { get; set; }
 
-        [Display(Name = "Date of Z/P")]
+        [Display(Name = "Дата зарплаты")]
         [DataType(DataType.DateTime)]
         public DateTime DateReceipt { get; set; }
 
-        [Display(Name = "Work Time")]
+        [Display(Name = "Время работы")]
         [DataType(DataType.Time)]
         public DateTime FactTime { get; set; }
 
