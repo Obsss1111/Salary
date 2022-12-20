@@ -9,15 +9,15 @@ namespace Salary.Models
     public class Firm
     {
         [Key]
-        [Display(Name = "Код организации")]
+        [Display(Name = "Code of organization")]
         [DataType(DataType.Text)]
         public int Code { get; set; }
 
-        [Display(Name = "Название организации")]
+        [Display(Name = "Name of organization")]
         [DataType(DataType.Text)]
         public string ShortName { get; set; }
 
-        [Display(Name = "Полное название организации")]
+        [Display(Name = "Full name of organization")]
         [DataType(DataType.Text)]
         public string FullName { get; set; }
     }
